@@ -1,0 +1,60 @@
+:host {
+  display: block;
+  z-index: 3;
+  position: sticky;
+  top: 0px;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+
+  .button-icon {
+    display: flex;
+    column-gap: 20px;
+    width: 60px;
+  }
+
+  .head-name {
+    text-align: center;
+    color: #000;
+    padding: 50px 100px;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: 0.5rem;
+    }
+    mat-icon {
+      transform: scale(1.4);
+    }
+  }
+
+  // @media screen and (max-width: 700px) 
+  // {
+  //   .head-name h1
+  // {
+  //       font-size: 80%;
+  // }
+  // }
+
+  // @media screen and (max-width: 595px) 
+  // {
+  //   .head-name h1
+  // {
+  //       font-size: 0%;
+  // }
+  // }
+
+  // @media screen and (max-width: 390px) 
+  // {
+  //   .button-icon {
+  //     column-gap: 5px;
+  //     width: 0px;
+  //   }
+  // }
+
+}
+

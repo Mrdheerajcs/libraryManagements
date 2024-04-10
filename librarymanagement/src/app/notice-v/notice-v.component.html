@@ -1,0 +1,16 @@
+<div class="update">
+    <marquee [scrollAmount]="3" direction="up" id="scroll_news">
+        <div onmouseover="document.getElementById('scroll_news').stop()"
+        onmouseout="document.getElementById('scroll_news').start()">
+            <!-- <span class="multicolortext"> -->
+                <table class="table" >
+                    <tbody >
+                        <tr *ngFor="let item of noticese">
+                            <th class="multicolortext" scope="row" routerLink="books/library">{{item.noticeB}}</th>
+                        </tr>
+                    </tbody>
+                 </table>
+            <!-- </span> -->
+        </div>
+    </marquee>
+</div>

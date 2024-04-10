@@ -1,0 +1,35 @@
+<mat-card>
+    <mat-card-content>
+        <form [formGroup]="addNotice" (ngSubmit)="collectNotice()">
+            <div class="form-group">
+                <label for="exampleInputEmail1"> Add New Notice</label>
+                <h3>{{msg}}</h3>
+                <input type="email" class="form-control" formControlName="noticeB" placeholder="Enter New Notice">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <br>
+        <br>
+        <table class="table" >
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Notice</th>
+                    <th scope="col">Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of noticese">
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.noticeB}}</td>
+                    <td><a routerLink="/n-list/{{item.id}}"><i class="fa fa-edit"
+                                style="font-size:20px;color:blue">&nbsp;&nbsp;&nbsp;&nbsp;</i>
+                            <i (click)="deleteNotice(item.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+         </table>
+    </mat-card-content>
+</mat-card>
